@@ -11,8 +11,6 @@ public class Planet {
         this.angle = ang;
         this.diameter = diam;
         this.colour = c;
-        //this.rotationAngle = rotationAng;
-        //this.rotationDistance = rotationDis;
     }
 
     public double getDistance(){
