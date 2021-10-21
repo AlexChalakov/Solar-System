@@ -1,18 +1,18 @@
 public class Planet {
-    private double distance;
-    private double angle;
-    private double diameter;
-    private String colour;
-    private double rotationAngle;
-    private double rotationDistance;
+    public double distance;
+    public double angle;
+    public double diameter;
+    public String colour;
+    //public double rotationAngle;
+    //public double rotationDistance;
 
-    public Planet(double dis, double ang, double diam, String c, double rotationAng, double rotationDis){
+    public Planet(double dis, double ang, double diam, String c){
         this.distance = dis;
         this.angle = ang;
         this.diameter = diam;
         this.colour = c;
-        this.rotationAngle = rotationAng;
-        this.rotationDistance = rotationDis;
+        //this.rotationAngle = rotationAng;
+        //this.rotationDistance = rotationDis;
     }
 
     public double getDistance(){
@@ -47,7 +47,7 @@ public class Planet {
         this.colour = colour;
     }
 
-    public double getRotAngle(){
+    /*public double getRotAngle(){
         return rotationAngle;
     } 
 
@@ -61,12 +61,12 @@ public class Planet {
 
     public void setRotDistance(double rotationDistance){
         this.rotationDistance = rotationDistance;
-    }
+    }*/
 
 
-    public void drawInto (double speedRot,SolarSystem milkyWay){
+    public void drawPlanetInto (double speedRot,SolarSystem milkyWay){
         angle += speedRot;
-        milkyWay.drawSolarObjectAbout(distance, angle, diameter, colour, getRotAngle(), getRotDistance());
+        milkyWay.drawSolarObject(distance, angle, diameter, colour);
     }
 
 }
