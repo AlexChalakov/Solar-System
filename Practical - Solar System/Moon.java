@@ -1,15 +1,13 @@
 public class Moon extends Planet{
 
-    private double rotationAngle;
-    private double rotationDistance;
+    private Planet planet;
     
-    public Moon(double dis, double ang, double diam, String c, double rotationAng, double rotationDis) {
+    public Moon(double dis, double ang, double diam, String c, Planet p) {
         super(dis, ang, diam, c);
-        this.rotationAngle = rotationAng;
-        this.rotationDistance = rotationDis;
+        this.planet = p;
     }
 
-    public double getRotAngle(){
+    /*public double getRotAngle(){
         return rotationAngle;
     } 
 
@@ -23,11 +21,11 @@ public class Moon extends Planet{
 
     public void setRotDistance(double rotationDistance){
         this.rotationDistance = rotationDistance;
-    }
+    }*/
 
     public void drawIntoAbout(double speedRot, SolarSystem milkyWay){
         angle += speedRot;
-        milkyWay.drawSolarObjectAbout(distance, angle, diameter, colour, rotationAngle, rotationDistance);
+        milkyWay.drawSolarObjectAbout(distance, angle, diameter, colour, planet.getDistance(), planet.getAngle());
     }
     
 }

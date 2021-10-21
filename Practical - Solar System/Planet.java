@@ -3,8 +3,8 @@ public class Planet {
     public double angle;
     public double diameter;
     public String colour;
-    //public double rotationAngle;
-    //public double rotationDistance;
+    public double rotationAngle;
+    public double rotationDistance;
 
     public Planet(double dis, double ang, double diam, String c){
         this.distance = dis;
@@ -47,7 +47,7 @@ public class Planet {
         this.colour = colour;
     }
 
-    /*public double getRotAngle(){
+    public double getRotAngle(){
         return rotationAngle;
     } 
 
@@ -61,8 +61,7 @@ public class Planet {
 
     public void setRotDistance(double rotationDistance){
         this.rotationDistance = rotationDistance;
-    }*/
-
+    }
 
     public void drawPlanetInto (double speedRot,SolarSystem milkyWay){
         angle += speedRot;

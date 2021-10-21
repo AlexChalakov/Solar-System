@@ -5,10 +5,10 @@ public class Main {
         Sun sun = new Sun(0,0,60, "YELLOW");
 
         Planet mercury = new Planet(50, 50, 10, "DARK_GRAY");
-        Planet earth = new Planet(120, 180, 20, "BLUE");
+        Planet earth = new Planet(120, 0, 20, "BLUE");
         Planet mars = new Planet(170, 100, 10, "RED");
 
-        Moon moon = new Moon(100, 100, 10, "WHITE", earth.getDistance(), earth.getAngle());
+        Moon moon = new Moon(50, 0, 10, "WHITE", earth);
     
         boolean inOrbit = true; //for infinite while loop
         while(inOrbit)
@@ -19,7 +19,7 @@ public class Main {
             mars.drawPlanetInto(2,milkyWay);
             mercury.drawPlanetInto(3, milkyWay);
 
-            moon.drawIntoAbout(3, milkyWay);
+            moon.drawIntoAbout(7, milkyWay);
             
             /*milkyWay.drawSolarObjectAbout(80, angle2, 20, "LIGHT_GRAY", 0, 0); //Venus
             milkyWay.drawSolarObjectAbout(120, angle, 30, "BLUE", 0, 0);    //Earth
