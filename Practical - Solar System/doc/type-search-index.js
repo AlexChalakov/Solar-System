@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"<Unnamed>","l":"Main"},{"p":"<Unnamed>","l":"Moon"},{"p":"<Unnamed>","l":"Planet"},{"p":"<Unnamed>","l":"SolarSystem"},{"p":"<Unnamed>","l":"Sun"}];updateSearchResults();
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"<Unnamed>","l":"SolarSystem"},{"p":"<Unnamed>","l":"SolarSystemController"},{"p":"<Unnamed>","l":"SolarSystemGUI"}];updateSearchResults();

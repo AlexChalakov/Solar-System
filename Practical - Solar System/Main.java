@@ -7,10 +7,10 @@ public class Main {
     public static void main (String[] args){  //main method
 
         SolarSystem milkyWay = new SolarSystem(800,800); //new solar system instance creayed with 700x700 parameteres
-        Sun sun = new Sun(0,0,70, "YELLOW");    //declaring the sun object
+        Sun sun = new Sun(0,0,80, "YELLOW");    //declaring the sun object
 
         //introducing planets into the Solar System
-        Planet mercury = new Planet(60, 0, 10, "DARK_GRAY"); 
+        Planet mercury = new Planet(70, 0, 10, "DARK_GRAY"); 
         Planet earth = new Planet(130, 150, 20, "BLUE");
         Planet mars = new Planet(190, 360, 10, "RED");
         Planet jupiter = new Planet(270, 200, 50, "GRAY");
