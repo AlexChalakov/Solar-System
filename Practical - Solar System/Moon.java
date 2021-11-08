@@ -1,4 +1,4 @@
-public class Moon extends Planet{
+public class Moon extends SolarObject{
 
     private Planet planet;
     
@@ -8,15 +8,14 @@ public class Moon extends Planet{
      * a stelar object of the given diameter is built,
      * being able to be displayed in the Solar System.
      * It is specified that the object created should circle around a specified planet.
+     * @param mW the solar system the moon belongs to.
      * @param dis the distance from the sun to the object.
      * @param ang the angle (in degrees) that represents how far the planet is around its orbit of the sun.
      * @param diam the size of the object.
      * @param c the colour of this object, as a string. It is always one of the given options from the colour variations from the Solar System class.
-     * @param p the planet that the moon will orbit around
      */
-    public Moon(double dis, double ang, double diam, String c, Planet p) {
-        super(dis, ang, diam, c);
-        this.planet = p;
+    public Moon(SolarSystem mW, double dis, double ang, double diam, String c) {
+        super(mW, dis, ang, diam, c);
     }
 
     /**
