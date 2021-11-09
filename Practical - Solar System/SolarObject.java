@@ -1,16 +1,28 @@
 public class SolarObject {
+    protected String name;
+    protected SolarSystem milkyWay;
     protected double distance;
     protected double angle;
     protected double diameter;
+    protected double speed;
     protected String colour;
-    protected SolarSystem milkyWay;
 
-    public SolarObject(SolarSystem mW, double dis, double ang, double diam, String c){
+    public SolarObject(String name, SolarSystem mW, double dis, double ang, double diam, double sp, String c){
+        this.name = name;
         this.milkyWay = mW;
         this.distance = dis;
         this.angle = ang;
         this.diameter = diam;
+        this.speed = sp;
         this.colour = c;
+    }
+
+    public String getName(){ //get method for name
+        return name;
+    }
+
+    public void setName(String name){
+        this.name = name;
     }
 
     public double getDistance(){ //get method for the distance
@@ -44,16 +56,16 @@ public class SolarObject {
     public void setColour(String colour){ //set method for the colour
         this.colour = colour;
     }
-
+    
     public void drawPlanetInto (SolarSystem milkyWay){
         milkyWay.drawSolarObject(getDistance(), getAngle(), getDiameter(), getColour());
     }
 
-    public void drawIntoAbout(SolarSystem milkyWay){
-        milkyWay.drawSolarObjectAbout(distance, angle, diameter, colour, getDistance(), getAngle());
+    public void drawIntoAbout(SolarSystem milkyWay, SolarObject aroundBody){
+        milkyWay.drawSolarObjectAbout(distance, angle, diameter, colour, aroundBody.getDistance(), aroundBody.getAngle());
     }
 
-    public void move (double speedRot){
-        angle += speedRot;
+    public void move (){
+        angle += speed;
     }
 }
