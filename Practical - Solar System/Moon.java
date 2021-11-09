@@ -8,8 +8,9 @@ public class Moon extends SolarObject{
      * a stelar object of the given diameter is built,
      * being able to be displayed in the Solar System.
      * It is specified that the object created should circle around a specified planet.
-     * @param dis the distance from the sun to the object.
+     * @param name the name of the moon itself.
      * @param mW the solar system the planet is in.
+     * @param dis the distance from the sun to the object.
      * @param ang the angle (in degrees) that represents how far the planet is around its orbit of the sun.
      * @param diam the size of the object.
      * @param sp the speed of the object.
@@ -21,7 +22,7 @@ public class Moon extends SolarObject{
         this.orbittingObject = obj;
     }
 
-    public SolarObject getObject(){
+    public SolarObject getObject(){ //get Method for the object the moon will orbit
         return orbittingObject;
     }
 }
