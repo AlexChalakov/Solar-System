@@ -10,15 +10,18 @@ public class Driver implements SolarSystemController{
         
         gui.addSolarSystemController(this);
 
-        SolarObjects.add(new Sun("Sun",milkyWay, 0, 0, 80, 0, "YELLOW"));
+        SolarObjects.add(new Sun(milkyWay,80));
         
         SolarObjects.add(new Planet("Mercury",milkyWay, 70, 0, 10, 0.5, "DARK_GRAY")); //Mercury - 1
         SolarObject earth = new Planet("Earth",milkyWay, 130, 150, 20, 1,  "BLUE");
         SolarObjects.add(earth); //Earth - 2
         SolarObjects.add(new Planet("Mars",milkyWay, 190, 360, 10, 1.5, "RED")); //Mars - 3
-        SolarObjects.add(new Planet("Jupiter",milkyWay, 270, 200, 50, 1, "GRAY")); // Jupiter - 4
+        SolarObject jupiter = new Planet("Jupiter",milkyWay, 270, 200, 50, 1, "GRAY");
+        SolarObjects.add(jupiter); // Jupiter - 4
 
         SolarObjects.add(new Moon("Moon",milkyWay, 40, 150, 10, 4, "WHITE", earth )); // Moon Earth
+        SolarObjects.add(new Moon("Moon",milkyWay, 40, 0, 10, 4, "GRAY", earth )); // Moon Earth 2
+        SolarObjects.add(new Moon("Moon",milkyWay, 60, 70, 20, 4, "GREEN", jupiter )); //Jupiter Moon
 
         boolean inOrbit = true; //for infinite while loop
         while(inOrbit){

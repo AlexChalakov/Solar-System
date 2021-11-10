@@ -17,5 +17,3 @@ public class Planet extends SolarObject{
         super(name, mW, dis, ang, diam, sp, c);
     }
 }
-    
-
